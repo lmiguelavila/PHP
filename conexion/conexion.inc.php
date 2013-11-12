@@ -19,7 +19,7 @@ class db{
 		
 		$resultado = mysqli_query($this->conn,$query);
 		if (!$resultado) {
-			die('Error al realizar la consulta');
+			die('Error al realizar la consulta '.mysqli_error($this->conn));
 		}
 
 		return $resultado;
